@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ming.mapper.UserMapper">
+    <insert id="insertUser">
+        insert into t_user (user_id,user_name,password,phone) values(#{userId},#{name},#{pass},#{phone})
+    </insert>
+    <select id="findByName" resultType="com.ming.model.T_user">
+        SELECT * FROM t_user WHERE user_name=#{name}
+    </select>
+</mapper>
